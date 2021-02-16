@@ -3,6 +3,7 @@ from collections import deque
 from unityagents import UnityEnvironment
 import numpy as np
 import torch
+import matplotlib.pyplot as plt
 
 file_name = "Banana.app"
 env = UnityEnvironment(file_name=file_name)
