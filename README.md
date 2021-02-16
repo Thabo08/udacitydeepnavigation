@@ -1,6 +1,7 @@
 [//]: # (Image References)
 
 [image1]: snippet.png "snippet"
+[image2]: bananathief.gif "bananathief"
 
 # Deep Q Learning Navigation: Banana Picker
 
@@ -11,7 +12,7 @@ The agent that interacts with the environment gets a reward of +1 for picking a 
 picking a blue one. The agent is considered to have successfully navigated through the environment if it has gained a 
 cumulative score of 13 in a single episode.
 
-The agent that navigates the environment employs deep learning methods in learning how to achieve its goal. Using in
+The agent that navigates the environment employs deep learning methods in learning how to achieve its goal. Written in
 Python, the problem was solved in the following ways:
 
 
@@ -29,11 +30,11 @@ more influence on the output. The default probability of zeroing neurons here is
 
 
 ### 2. The Agent
-The code that encompasses the behaviour of the agent as it interacts with the environment is in _dqn_agent.py_ file. This
+The code that encompasses the behaviour of the agent as it interacts with the environment is in the _dqn_agent.py_ file. This
 is where we define what should happen when the agent interacts with the environment and how it should learn what the best
-actions are overtime. 
+actions to take are overtime. 
 
-Contained in _dqn_agent.py_ file are two classes, YellowBananaThief, which encompasses the agent's behavior and learning
+Contained in the _dqn_agent.py_ file are two classes, YellowBananaThief, which encompasses the agent's behavior and learning
 algorithm, and ReplayBuffer, which is a dependency of the YellowBananaThief class and is used to enable the agent to replay
 previous experiences while learning.
 
@@ -45,3 +46,7 @@ the agent is trained and tested. The required dependencies can be installed by r
 The trainer can be used in the following manner when running it straight as python code in a local environment:
 ![snippet][image1]
 
+Following training, running the application in test mode should give an output similar to the one below, indicating the
+performance of the agent
+
+![bananathief][image2]
