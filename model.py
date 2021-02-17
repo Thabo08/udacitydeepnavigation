@@ -1,4 +1,3 @@
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -33,5 +32,3 @@ class DQNetwork(nn.Module):
         x = F.relu(self.fc2(x))
         x = self.drop_out(x)
         return F.relu(self.fc3(x))
-
-

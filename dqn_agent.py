@@ -15,7 +15,6 @@ class ReplayBuffer:
         Credit: Taken verbatim from Udacity examples. """
     def __init__(self, action_size, buffer_size, batch_size, seed):
         """
-        Initialize parameters
         :param action_size: The number of all legal actions
         :param buffer_size: The number of items the buffer can keep
         :param batch_size: The number of samples to replay from memory buffer
@@ -77,6 +76,7 @@ class YellowBananaThief:
             :param epsilon: Epsilon value to apply epsilon-greedy action selection
         """
         def action_probabilities(action_vals, eps, num_actions):
+            """ Determine the epsilon probabilities of choosing actions """
             probs = np.ones(num_actions, dtype=float) * (eps / num_actions)
             best_action = np.argmax(action_vals)
             probs[best_action] += (1. - eps)
@@ -92,7 +92,7 @@ class YellowBananaThief:
         return np.random.choice(np.arange(self.action_size), p=action_probs)
 
     def step(self, state, action, reward, next_state, done):
-        """ Step forward to train the first model """
+        """ Step forward to train the model """
         self.memory.add(state, action, reward, next_state, done)
         self.time_step = (self.time_step + 1) % self.update_frequency
         if self.time_step == 0:
@@ -102,7 +102,7 @@ class YellowBananaThief:
                 self.learn(experiences)
 
     def learn(self, experiences):
-        """ Train the model from a sample of experiences """
+        """ Train the agent from a sample of experiences """
         def soft_update(local_model, target_model, tau):
             """Soft update model parameters.
                    θ_target = τ*θ_local + (1 - τ)*θ_target
