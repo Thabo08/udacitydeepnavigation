@@ -69,6 +69,6 @@ bananas instead of taking a step forward.
 
 Potential improvements to fix such include, but are not limited to:
 - Adding more layers to the neural network architecture
-- Experimenting with different model optimizers and their learning rates
+- Experimenting with different model optimizers and learning rates
 - Experimenting with double Q learning algorithm to minimize the overestimation of action values
-- Implementing prioritized experience replay, which will replay experiences which are of more significance
+- Implementing prioritized experience replay algorithm, which will replay experiences which are of more significance
