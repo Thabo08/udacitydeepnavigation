@@ -1,7 +1,6 @@
 [//]: # (Image References)
 
-[image1]: snippet.png "snippet"
-[image2]: bananathief.gif "bananathief"
+[image1]: bananathief.gif "bananathief"
 
 # Deep Q Learning Navigation: Banana Picker
 
@@ -41,7 +40,10 @@ previous experiences while learning.
 
 ### 3. The Trainer
 The code that performs the training is in the utility file _trainer.py_. In this file all required imports are done and,
-the agent is trained and tested. The required dependencies can be installed by running: `pip install -r requirements.txt`.
+the agent is trained and tested. The required dependencies can be installed by running:
+```shell
+   pip install -r requirements.txt
+```
 
 The trainer can be used in the following manner when running it straight as python code in a local environment:
 ```python
@@ -58,4 +60,4 @@ The trainer can be used in the following manner when running it straight as pyth
 Following training, running the application in test mode should give an output similar to the one below, indicating the
 performance of the agent
 
-![bananathief][image2]
+![bananathief][image1]
