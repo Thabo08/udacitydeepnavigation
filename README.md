@@ -44,7 +44,16 @@ The code that performs the training is in the utility file _trainer.py_. In this
 the agent is trained and tested. The required dependencies can be installed by running: `pip install -r requirements.txt`.
 
 The trainer can be used in the following manner when running it straight as python code in a local environment:
-![snippet][image1]
+```python
+   if __name__ == '__main__':
+       agent = YellowBananaThief(state_size, action_size, update_frequency=2)
+       filename = "checkpoint.pth"
+       train_mode = True
+       if train_mode:
+           run(agent, filename)
+       else:
+           test(agent, filename)
+```
 
 Following training, running the application in test mode should give an output similar to the one below, indicating the
 performance of the agent
